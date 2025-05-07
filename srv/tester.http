@@ -1,0 +1,108 @@
+###Get the details of service document
+http://localhost:4004/odata/v4/CatalogService/
+
+####
+http://localhost:4004/odata/v4/CatalogService/$metadata
+
+####
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+
+####
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$top=2&$skip=3
+
+###Get the count of records
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/$count
+
+
+###Single Employee Record by its KEY
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19807FB
+
+
+###Filter data by using $filter
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=bankName eq 'My Bank of New York'
+
+
+###Case filtering
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=contains(nameFirst, 'na')
+
+####post
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Content-Type: application/json
+
+ {
+      "nameFirst": "Sally_New",
+      "nameMiddle": null,
+      "nameLast": "Spring",
+      "nameInitials": null,
+      "sex": "F",
+      "language": "E",
+      "phoneNumber": "+91 9028238284",
+      "email": "sindhumogare23@gmail.com",
+      "loginName": "SPRINGS",
+      "Currency_code": "USD",
+      "salaryAmount": 55549,
+      "accountNumber": "111222333",
+      "bankId": "",
+      "bankName": "My Bank of Antioch"
+    }
+
+####
+http://localhost:4004/odata/v2/CatalogService/EmployeeSet
+
+
+####
+http://localhost:4004/odata/v4/CatalogService/ProductSet
+
+###
+http://localhost:4004/odata/v4/CatalogService/CDSSet('74867AD200E41EDBA5D8B06885AF0052')
+
+###Get the PO Data
+
+
+###Calling the action on PO
+POST http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2A052/boost
+Content-Type: application/json
+
+{}
+
+###
+
+http://localhost:4004/odata/v4/CatalogService/getLargestObject()
+
+###
+http://localhost:4004/odata/v4/CatalogService/getLargestOrder()
+
+
+###
+ http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2A052
+
+
+###Calling the  PO function
+http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2A052/changeAmount()
+
+###Single Employee Record by its KEY
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19807FB
+
+###
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Content-Type: application/json
+
+{
+  "nameFirst": "Monica",
+  "nameMiddle": null,
+  "nameLast": "Hicks",
+  "nameInitials": null,
+  "sex": "F",
+  "language": "E",
+  "phoneNumber": null,
+  "email": "maria.hicks@itelo.info",
+  "loginName": "HICKSM",
+  "Currency_code": "USD",
+  "salaryAmount": 4987611,
+  "accountNumber": "1122334455",
+  "bankId": "26005885",
+  "bankName": "My Bank of New Jersy"
+}
+
+###
+http://localhost:4004/odata/v4/MyService/EmployeeSrv
