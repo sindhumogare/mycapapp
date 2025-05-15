@@ -5,7 +5,7 @@ sap.ui.define(
 
         return Component.extend("bosch.po.managepo.Component", {
             metadata: {
-                manifest: "json"
+                manifest: "json" 
             }
         });
     }
